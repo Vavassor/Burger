@@ -48,7 +48,6 @@ ol {
 }
 
 ul {
-  list-style-type: disc;
   padding-left: 1em;
 }
 
@@ -81,6 +80,10 @@ ul {
   display: none;
   color: #ff0000;
   padding: 1em 0;
+}
+
+.list-item-burger::before {
+  content: "🍔";
 }
 
 .undevoured-area {
