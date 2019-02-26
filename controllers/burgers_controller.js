@@ -13,9 +13,19 @@ router.get("/", (request, response) => {
   });
 });
 
+router.post("/api/burger", (request, response) => {
+  burger.create(request.body, (results) => {
+    if (results.affectedRows === 0) {
+      response.status(404).end();
+    } else {
+      response.status(200).end();
+    }
+  });
+});
+
 router.put("/api/burger", (request, response) => {
   burger.update(request.body, (results) => {
-    if (results.changedRows === 0) {
+    if (results.affectedRows === 0) {
       response.status(404).end();
     } else {
       response.status(200).end();
