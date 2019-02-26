@@ -23,13 +23,10 @@ $(() => {
 
     const nameInput = $("#burger-name");
     
-    if (nameInput[0].validity.valid) {
-      nameInput.removeClass("invalid");
-      $("#burger-name-feedback").addClass("display-none");
-    } else {
+    if (!nameInput[0].validity.valid) {
       nameInput.addClass("invalid");
-      $("#burger-name-feedback").removeClass("display-none");
-      return;
+      $("#burger-name-feedback").show();
+      return false;
     }
 
     const burger = {
