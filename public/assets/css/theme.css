@@ -1,0 +1,95 @@
+body {
+  display: grid;
+  grid-column: 1fr;
+  grid-template-areas:
+    "header"
+    "undevoured"
+    "devoured"
+    "form";
+  padding: 0 2em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.83em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.67em 0;
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+}
+
+input {
+  padding: 1em .75em;
+}
+
+label {
+  padding-right: 1em;
+}
+
+li {
+  padding: .5em 0;
+}
+
+main {
+  grid-area: form;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1em;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1em;
+}
+
+
+.button {
+  padding: .5em;
+}
+
+.button-primary {
+  padding: .5em;
+}
+
+.devour {
+  margin-left: 1em;
+}
+
+.devoured-area {
+  grid-area: devoured;
+}
+
+.form-group {
+  padding: 1em 0;
+}
+
+.undevoured-area {
+  grid-area: undevoured;
+}
+
+
+#burger-form {
+  padding: 1em 0;
+}
+
+
+@media (min-width: 1200px) {
+  body {
+    grid-column: auto 1fr 1fr auto;
+    grid-template-areas:
+      ". header header ."
+      ". undevoured devoured . "
+      ". form form .";
+    padding: 0;
+  }
+}
