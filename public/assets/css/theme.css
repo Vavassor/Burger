@@ -96,13 +96,20 @@ ul {
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 576px) {
   body {
-    grid-column: auto 1fr 1fr auto;
+    grid-auto-columns: auto 250px 250px auto;
+    grid-column-gap: 50px;
     grid-template-areas:
       ". header header ."
       ". undevoured devoured . "
       ". form form .";
     padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    grid-auto-columns: auto 400px 400px auto;
   }
 }
