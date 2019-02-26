@@ -73,6 +73,16 @@ ul {
   padding: 1em 0;
 }
 
+.invalid {
+  outline: .1em solid #ff0000;
+}
+
+.invalid-feedback {
+  display: none;
+  color: #ff0000;
+  padding: 1em 0;
+}
+
 .undevoured-area {
   grid-area: undevoured;
 }

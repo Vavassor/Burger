@@ -21,8 +21,19 @@ $(() => {
   $("#burger-form").submit((event) => {
     event.preventDefault();
 
+    const nameInput = $("#burger-name");
+    
+    if (nameInput[0].validity.valid) {
+      nameInput.removeClass("invalid");
+      $("#burger-name-feedback").addClass("display-none");
+    } else {
+      nameInput.addClass("invalid");
+      $("#burger-name-feedback").removeClass("display-none");
+      return;
+    }
+
     const burger = {
-      "burger_name": $("#burger-name").val().trim(),
+      "burger_name": nameInput.val().trim(),
     };
 
     $.ajax("/api/burger", {
