@@ -6,7 +6,11 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", function(request, response) {
-  response.render("index");
+  burger.all((results) => {
+    response.render("index", {
+      burgers: results,
+    });
+  });
 });
 
 module.exports = router;

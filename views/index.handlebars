@@ -1,1 +1,21 @@
 <h1>Burger Factory</h1>
+
+<h2>Undevoured</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burger-undevoured}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Devoured</h2>
+
+<ol>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burger-devoured}}
+    {{/if}}
+  {{/each}}
+</ol>
