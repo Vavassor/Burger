@@ -4,6 +4,17 @@ $(() => {
   $(".devour").click((event) => {
     const button = $(event.currentTarget);
     const id = button.data("id");
-    console.log("Devoured burger ID " + id + ".");
+    const burgerUpdate = {
+      id: parseInt(id),
+      devoured: true,
+    };
+
+    $.ajax("/api/burger", {
+      contentType: "application/json",
+      data: JSON.stringify(burgerUpdate),
+      method: "PUT",
+    }).then(() => {
+      location.reload();
+    });
   });
 });
