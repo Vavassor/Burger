@@ -6,12 +6,11 @@ body {
     "undevoured"
     "devoured"
     "form";
-  padding: 0 2em;
 }
 
 h1 {
-  border-bottom: .1em solid #000000;
-  border-top: .1em solid #000000;
+  border-bottom: .1em solid #ffffff;
+  border-top: .1em solid #ffffff;
   display: inline-block;
   font-family: "Chewy", serif;
   font-size: 2em;
@@ -27,6 +26,8 @@ h2 {
 }
 
 header {
+  background-color: #3f3fff;
+  color: #ffffff;
   grid-area: header;
   padding: 1em 0;
   text-align: center;
@@ -51,6 +52,10 @@ main {
   display: flex;
   flex-direction: column;
   grid-area: form;
+}
+
+p {
+  font-family: sans-serif;
 }
 
 ol {
@@ -151,10 +156,9 @@ ul {
     grid-auto-columns: auto 250px 250px auto;
     grid-column-gap: 50px;
     grid-template-areas:
-      ". header header ."
+      "header header header header"
       ". undevoured devoured . "
       ". form form .";
-    padding: 0;
   }
 
   .section-column {
