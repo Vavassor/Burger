@@ -10,12 +10,17 @@ body {
 }
 
 h1 {
+  border-bottom: .1em solid #000000;
+  border-top: .1em solid #000000;
+  display: inline-block;
+  font-family: "Chewy", serif;
   font-size: 2em;
   font-weight: bold;
-  margin: 0.83em 0;
+  padding: 0.83em 0;
 }
 
 h2 {
+  font-family: "Chewy", serif;
   font-size: 1.5em;
   font-weight: bold;
   margin: 0.67em 0;
@@ -23,6 +28,7 @@ h2 {
 
 header {
   grid-area: header;
+  padding: 1em 0;
   text-align: center;
 }
 
@@ -31,14 +37,19 @@ input {
 }
 
 label {
+  font-family: "Arvo", serif;
   padding-right: 1em;
 }
 
 li {
+  font-family: "Arvo", serif;
   padding: .5em 0;
 }
 
 main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   grid-area: form;
 }
 
@@ -52,20 +63,44 @@ ul {
 }
 
 
+.burger-name {
+  padding-right: .5em;
+}
+
+.button,
+.button-primary {
+  border: none;
+  border-radius: .2em;
+  color: #ffffff;
+}
+
 .button {
+  background-color: #6f6f6f;
   padding: .5em;
+}
+
+.button:focus,
+.button:hover {
+  background-color: #9f9f9f;
 }
 
 .button-primary {
-  padding: .5em;
+  background-color: #6f6fff;
+  padding: 1em;
 }
 
-.devour {
-  margin-left: 1em;
+.button-primary:focus,
+.button-primary:hover {
+  background-color: #9f9fff;
 }
 
 .devoured-area {
   grid-area: devoured;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group {
@@ -82,8 +117,23 @@ ul {
   padding: 1em 0;
 }
 
+.list-item-burger {
+  line-height: 1.5em;
+}
+
 .list-item-burger::before {
   content: "🍔";
+  padding-right: .5em;
+}
+
+.section-column {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button {
+  align-self: stretch;
 }
 
 .undevoured-area {
@@ -92,7 +142,7 @@ ul {
 
 
 #burger-form {
-  padding: 1em 0;
+  padding: 2em 0;
 }
 
 
@@ -105,6 +155,10 @@ ul {
       ". undevoured devoured . "
       ". form form .";
     padding: 0;
+  }
+
+  .section-column {
+    align-items: center;
   }
 }
 
