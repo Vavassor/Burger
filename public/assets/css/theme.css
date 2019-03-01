@@ -135,6 +135,7 @@ ul {
   align-items: start;
   display: flex;
   flex-direction: column;
+  padding: 0 2em;
 }
 
 .submit-button {
@@ -153,8 +154,7 @@ ul {
 
 @media (min-width: 576px) {
   body {
-    grid-auto-columns: auto 250px 250px auto;
-    grid-column-gap: 50px;
+    grid-auto-columns: auto 275px 275px auto;
     grid-template-areas:
       "header header header header"
       ". undevoured devoured . "
@@ -163,6 +163,13 @@ ul {
 
   .section-column {
     align-items: center;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    grid-auto-columns: auto 350px 350px auto;
   }
 }
 
