@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-  border-bottom: .1em solid #ffffff;
-  border-top: .1em solid #ffffff;
+  border-bottom: .1em solid #000000;
+  border-top: .1em solid #000000;
   display: inline-block;
   font-family: "Chewy", serif;
   font-size: 2em;
@@ -26,8 +26,8 @@ h2 {
 }
 
 header {
-  background-color: #3f3fff;
-  color: #ffffff;
+  background-color: #ffcd42;
+  color: #000000;
   grid-area: header;
   padding: 1em 0;
   text-align: center;
@@ -72,27 +72,31 @@ ol {
 .button-primary {
   border: none;
   border-radius: .2em;
-  color: #ffffff;
 }
 
 .button {
-  background-color: #6f6f6f;
+  background-color: transparent;
+  border: .15em solid #df731a;
+  color: #df731a;
+  font-weight: bold;
   padding: .5em;
 }
 
 .button:focus,
 .button:hover {
-  background-color: #9f9f9f;
+  background-color: #efefef;
 }
 
 .button-primary {
-  background-color: #6f6fff;
+  background-color: #ffcd42;
+  color: #000000;
   padding: 1em;
 }
 
 .button-primary:focus,
 .button-primary:hover {
-  background-color: #9f9fff;
+  background-color: #df731a;
+  color: #ffffff;
 }
 
 .devoured-area {
