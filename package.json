@@ -1,5 +1,5 @@
 {
-  "name": "burger-factory",
+  "name": "burger",
   "version": "1.0.0",
   "description": "a burger restaurant app",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vavassor/Burger-Factory.git"
+    "url": "git+https://github.com/Vavassor/Burger.git"
   },
   "author": "Andrew Dawson",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/Vavassor/Burger-Factory/issues"
+    "url": "https://github.com/Vavassor/Burger/issues"
   },
-  "homepage": "https://github.com/Vavassor/Burger-Factory#readme",
+  "homepage": "https://github.com/Vavassor/Burger#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.1",
